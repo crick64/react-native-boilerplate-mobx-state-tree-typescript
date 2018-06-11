@@ -1,6 +1,6 @@
 {
-  "name": "ReactNativeSeed",
-  "version": "1.1.0",
+  "name": "ExtraMeIn",
+  "version": "0.0.1",
   "private": true,
   "devDependencies": {
     "babel-eslint": "8.1.0",
@@ -25,15 +25,12 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts start'",
+    "start": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts start'",
     "eject": "react-native-scripts eject",
     "jest": "node node_modules/jest/bin/jest.js",
     "watch": "npm run build -- -w",
-    "ios":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts ios'",
-    "android":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts android'",
+    "ios": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts ios'",
+    "android": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts android'",
     "tsc": "tsc",
     "clean": "rimraf artifacts",
     "build": "npm run clean && npm run tsc --",
@@ -43,7 +40,11 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
